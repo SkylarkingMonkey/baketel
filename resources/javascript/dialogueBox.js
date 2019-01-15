@@ -1,7 +1,7 @@
 const messages = {m1:"Hello,<br /><br />I see you are tempted to flip an unlabeled switch.<br /><br /><br />How very risky of you. . . <br /><br /><br />Is it fair to assume that you are unafraid of uncertainty and taking a risk?",
                   m2:". . . pity.", 
                   m3:"Well, well, well. . . <br /><br /><br />Anyone who is unafraid of risk and uncertainty is bound to come up against challenges.<br /><br />Are you up to the task of unlocking the switch?<br /><br />",
-                  m4:"<br />Excellent....<br /><br /><br />have fun..."};
+                  m4:"<br />Bah! hahah<br />I'm so pleased you made it this far, but the next part is still under construction! Come back later! Now hit the NO button."};
 //lo,<br /><br />I see you are tempted to flip an unlabeled switch.<br /><br /><br />How very risky of you. . . <br /><br /><br />Is it fair to assume that you are unafraid of uncertainty and taking a risk?
 
 //lo,<br /><br />I see you are tempted to flip an unlabeled switch.<br /><br /><br />How very risky of you. . . <br /><br /><br />Is it fair to assume that you are unafraid of uncertainty and taking a risk?
@@ -69,7 +69,7 @@ function yes(){
 }
 
 function setDelayOnText(){
-  typer.typeText(h1, messages.m4, 200);  
+  typer.typeText(h1, messages.m4, 50);  
 }
 
 function backToBoring(){
