@@ -7,6 +7,9 @@ $(document).ready(function (){
 
 $(document).ready(function (){
 	$('#pity').onClick(function(){
-
+		$('#mode-screen').attr("class", "mode-screen-off");
+		$('')
 	})
-})
+});
+
+
