@@ -63,7 +63,7 @@ function yes(){
     playBtn();
     laugh();
   } else if  (m === messages.m1){
-    typer.typeText(h1, messages.m3, 5);
+    typer.typeText(h1, messages.m3, 30);
   } else if (m === messages.m4){
     setTimeout(launchGame, 1000);
     setTimeout(expandModeStatue, 750);
