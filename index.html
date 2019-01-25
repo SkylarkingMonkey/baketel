@@ -23,7 +23,7 @@
   	<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./resources/javascript/hover.js"></script>
+    <script type="text/javascript" src="./resources/javascript/hover.js"></script>   
     <meta name="format-detection" content="telephone=no">
 
     <!--<script type="text/javascript" src="./resources/javascript/dialogueBox.js"></script>-->
@@ -32,13 +32,29 @@
   </head>
   <body>
   	<div id="mode-screen" class="mode-screen-off">
-  		<div>
-  		<h6>Current Mode* is set to:<br />BORING</h6>
-  		<h1 class="warning">*IT'S HIGHLY RECOMMENDED THAT YOU<br /> DO NOT CHANGE MODE</h1>
+  		<div id="mode-status">
+	  		<h6>Current Mode* is set to:</h6>
+	  		<div id="switch-table">
+	  				<div id="boring">BORING</div>
+	  				<div id="ludicrous" class="switch-table-closed">LUDICROUS</div>
+	  		</div>
+	  		<h1 id="warning" class="warning">*IT'S HIGHLY RECOMMENDED THAT YOU<br /> DO NOT CHANGE MODE</h1>
   		</div>
-  		<div class="dialogue-box">
-  			<div class="question-screen-container">
+  		<div id="dialogue-box" class="dialogue-box">
+  		<!--	<script src="./three-rpg/losttreasure/libs/three.min.js"></script>
+		    <script src="./three-rpg/losttreasure/libs/inflate.min.js"></script>
+		    <script src="./three-rpg/losttreasure/libs/FBXLoader.js"></script>
+		    <script src="./three-rpg/losttreasure/libs/Detector.js"></script>-->
+			<div id="question-screen-container" class="question-screen-container">  			
+				<div id="viewport" class="game-window-off">
+		        	<!--<canvas id="bmaze" class="game-window-off"></canvas>-->
+		<!--			<div id="message">
+						<p id="message_text"></p>
+					</div>
+					-->
+		        </div>				
 	  			<div id="question-screen" class="question-screen">
+
 	  				<div class="evil-face-container" id="evil-face">
 	  					<div class="face-line face-line-1">
 	  						<div class="face-piece">
@@ -2490,12 +2506,12 @@
 	  		</div>	
   			<div class="answer-console-container">
 	  			<div class="answer-console">
-	  				<a id="blackswan" class="yes-box" onclick="yes();">
-	  					<h1>Yes</h1>
-	  				</a>
-	  				<a id="pity" class="wuss-box" onclick="no();">
-	  					<h1>No</h1>
-	  				</a>
+	  				<div id="code-box">
+	  					<h1>ENTER CODE:</h1>
+	  					<input id="code-input" autofocus/>
+	  				</div>
+	  				<a id="blackswan" class="yes-box" onclick="yes();">Yes</a>
+	  				<a id="pity" class="wuss-box" onclick="no();">No</a>
 	  			</div>
 	  		</div>	
   		</div>
@@ -2738,8 +2754,21 @@
 		</div>			
   </body>
   <script type="text/javascript" src="./resources/javascript/info_toggle.js"></script>
-  <script type="text/javascript" src="./resources/javascript/dialogueBox.js"></script>
+
   <script type="text/javascript" src="./resources/javascript/evilLaugh.js"></script>
+
+		
+  <script src="./three-rpg/losttreasure/libs/three.min.js"></script>
+  <script src="./three-rpg/losttreasure/libs/inflate.min.js"></script>
+  <script src="./three-rpg/losttreasure/libs/FBXLoader.js"></script>
+  <script src="./three-rpg/losttreasure/libs/Detector.js"></script>
+
+
+  <script src="./libs/gltfLoader.js"></script>
+  <!--<script src="../../libs/stats.min.js"></script>-->
+  <script type="text/javascript" src="./resources/javascript/dialogueBox.js"></script>
+  <script src="./libs/maze/maze.js"></script>  	
+
 </html>
 
 

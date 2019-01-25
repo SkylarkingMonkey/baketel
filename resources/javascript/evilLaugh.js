@@ -3,7 +3,7 @@ function laugh (){
 	evil.classList.remove('evil-face-container');
 	evil.classList.add("evil-face-container-on");
 	revealSkull();
-	setTimeout(setLaughTimer, 15250);
+	setTimeout(setLaughTimer, 5250);
 	setTimeout(laugh, 300);	
 }
 
@@ -34,6 +34,11 @@ function revealSkull() {
 	});
 }
 
+function fadeSkull(){
+	$('#evil-face').fadeOut("slow", function(){
+
+	});
+}
 
 
 
