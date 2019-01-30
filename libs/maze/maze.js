@@ -142,7 +142,7 @@
 
             //load a glTF resource
             loader.load(
-                './libs/MazeScaledUp.gltf',
+                './libs/maze/MazeScaledUp.gltf',
                 function ( gltf ) {
 
                     scene.add( gltf.scene );
