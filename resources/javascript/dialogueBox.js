@@ -9,7 +9,7 @@ const messages = {m1:"Hello,<br /><br />I see you are tempted to flip an unlabel
 const h1 = document.getElementById('typer');
 let m = '';
 let clearTxt = false;
-let typingSpeed = 30;
+let typingSpeed = 3;
 
 const typer = {
   init() {
@@ -63,7 +63,7 @@ function yes(){
     playBtn();
     laugh();
   } else if  (m === messages.m1){
-    typer.typeText(h1, messages.m3, 30);
+    typer.typeText(h1, messages.m3, 3);
   } else if (m === messages.m4){
     setTimeout(launchGame, 1000);
     setTimeout(expandModeStatue, 750);
@@ -100,7 +100,7 @@ function playBtn(){
 }
 
 function setDelayOnText(){
-  typer.typeText(h1, messages.m4, 30);  
+  typer.typeText(h1, messages.m4, 3);  
 }
 
 function backToBoring(){
@@ -118,7 +118,7 @@ function wakeUpAi(){
 }
 
 function initiateAi(){
-  typer.typeText(h1, messages.m1, 30);
+  typer.typeText(h1, messages.m1, 3);
 }
 
 function launchGame(){

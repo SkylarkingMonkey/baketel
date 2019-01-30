@@ -52,7 +52,7 @@ class Game{
 		this.anims = ["ascend-stairs", "gather-objects", "look-around", "push-button", "run"];
 		this.tweens = [];
 		
-		this.assetsPath = './three-rpg/losttreasure/assets/';
+		this.assetsPath = '../../losttreasure/assets/';
 		
 		const options = {
 			assets:[
