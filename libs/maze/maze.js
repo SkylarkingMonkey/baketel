@@ -1,8 +1,12 @@
        
-            var player = { height:1.8, speed:0.2, turnSpeed:Math.PI*0.02 };
+            var player = { height:1.8, speed:2.5, turnSpeed:Math.PI*0.02 };
             var keyboard = {};
 
             var scene = new THREE.Scene();
+
+
+            var axesHelper = new THREE.AxesHelper( 500 );
+            scene.add( axesHelper );            
 
           //  var light = new THREE.DirectionalLight( 0xffffff, 1 );
           //  light.position.set( 100, 100, 100 ).normalize();
@@ -49,23 +53,23 @@
             container.appendChild(circle);            
 */
 
-            var controls = new THREE.OrbitControls( camera, renderer.domElement );
+          /*  var controls = new THREE.OrbitControls( camera, renderer.domElement );
             controls.enableDamping = true;
             controls.dampingFactor = 0.25;
             controls.enableZoom = true;
             controls.enableRotate = true;
 
-            controls.target = new THREE.Vector3(560, -7, 60);
+            controls.target = new THREE.Vector3(560, -7, 60);*/
             camera.position.set(580, -9.4, 60);
-            camera.rotation.set(-.6, 1.39, .6);
-            controls.update();
+            camera.rotation.set(0, 1.5, 0);
+         /*   controls.update();
 
-            controls.keys = {
+         /*   controls.keys = {
                 LEFT: 37, //left arrow
                 UP: 38, // up arrow
                 RIGHT: 39, // right arrow
                 BOTTOM: 40 // down arrow
-            } 
+            } */
 
 
             
@@ -111,13 +115,13 @@
             );
 
             function animate(time) {
-                if(keyboard[87]){ // W key
+                if(keyboard[38]){ // Up key
                     camera.position.x -= Math.sin(camera.rotation.y) * player.speed;
-                    camera.position.z -= -Math.cos(camera.rotation.y) * player.speed;
+                    camera.position.z -= Math.cos(camera.rotation.y) * player.speed;
                 }
-                if(keyboard[83]){ // S key
+                if(keyboard[40]){ // down key
                     camera.position.x += Math.sin(camera.rotation.y) * player.speed;
-                    camera.position.z += -Math.cos(camera.rotation.y) * player.speed;
+                    camera.position.z += Math.cos(camera.rotation.y) * player.speed;
                 }
                 if(keyboard[65]){ // A key
                     camera.position.x += Math.sin(camera.rotation.y + Math.PI/2) * player.speed;
@@ -128,20 +132,20 @@
                     camera.position.z += -Math.cos(camera.rotation.y - Math.PI/2) * player.speed;
                 }
                 
-                if(keyboard[37]){ // left arrow key
+                if(keyboard[39]){ // left arrow key
                     camera.rotation.y -= player.turnSpeed;
                 }
-                if(keyboard[39]){ // right arrow key
+                if(keyboard[37]){ // right arrow key
                     camera.rotation.y += player.turnSpeed;
                 }
                 
                 time *= 0.001;
                 resizeCanvasToDisplaySize();
                 requestAnimationFrame(animate);
-                controls.update();
+               /* controls.update();*/
                 renderer.render(scene, camera);
             }
 
-            requestAnimationFrame(animate);
+            animate();
 
    
