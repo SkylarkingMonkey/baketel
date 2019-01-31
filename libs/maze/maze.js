@@ -1,5 +1,5 @@
        
-            var player = { height:1.8, speed:2.5, turnSpeed:Math.PI*0.02 };
+            var player = { height:1.8, speed:5.5, turnSpeed:Math.PI*0.03 };
             var keyboard = {};
 
             var scene = new THREE.Scene();
