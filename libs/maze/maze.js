@@ -1,3 +1,8 @@
+
+
+
+
+
        
             var player = { height:1.8, speed:5.5, turnSpeed:Math.PI*0.03 };
             var keyboard = {};
@@ -148,4 +153,8 @@
 
             animate();
 
-   
+
+
+
+
+
