@@ -625,6 +625,14 @@ header h3 {
 
 .info-header{
 	cursor: pointer;
+	padding-bottom: 0px;
+	background-color: rgb(212, 212, 212);
+	width: 16%;
+	margin: auto;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 1.5em;	
+	color: rgb(172, 172, 172);	
 }
 
 
