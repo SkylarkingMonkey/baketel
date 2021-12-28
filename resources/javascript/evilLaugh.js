@@ -1,11 +1,22 @@
+var laughState = true;
+
 function laugh (){
-	var evil = document.getElementById("evil-face");
-	evil.classList.remove('evil-face-container');
-	evil.classList.add("evil-face-container-on");
-	revealSkull();
-	setTimeout(setLaughTimer, 5250);
-	setTimeout(laugh, 300);	
+			console.log(laughState, "laught state")
+			if (laughState===true){
+				var evil = document.getElementById("evil-face");
+				evil.classList.remove('evil-face-container');
+				evil.classList.add("evil-face-container-on");
+				setTimeout(setLaughTimer, 5250);
+				setTimeout(laugh, 300);				
+			} else {
+				setTimeout(jawUp, 5000);
+				setTimeout(jawUp, 6000);
+				setTimeout(jawUp, 7500);
+			}
+
 }
+
+
 
 function setLaughTimer(){
 	jawDown();
@@ -26,6 +37,7 @@ function jawUp(){
 
 
 function revealSkull() {
+	console.log("WTF SKULL")
 	$('.face-line').each(function(i){
 		var skullLine = $(this);
 		setTimeout(function(){

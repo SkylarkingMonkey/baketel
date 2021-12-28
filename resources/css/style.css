@@ -5,9 +5,11 @@ body{
 	height: 100%;
 	font-family:'Quicksand', sans-serif;
 	font-size: 16px;
-	min-width: 650px;
+	/*min-width: 650px;*/
 
 }
+
+
 
 .mode-screen-off {
 	display: none;
@@ -60,7 +62,8 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	width: 30%;
-	height: 50vh;
+	/*height: 50vh;*/
+	height:  65vh;
 	margin-top: 3em;
 	border: 3px solid #017401;
 	color: #387805;
@@ -686,14 +689,15 @@ header h3 {
 	width: 45%;
 }
 
-.project-section {
-
+.project-section-title {
+	padding-bottom: .25em;
+	font-family: 'Chakra Petch', sans-serif;
+	text-decoration: none;
+	color: #595959;
 }
 
 .project-section-title h1 {
 	font-size: 1.35em;
-	padding-bottom: .25em;
-	font-family: 'Chakra Petch', sans-serif;
 }
 
 .project-section-info {
@@ -720,6 +724,16 @@ header h3 {
 
 .cascade {
 	font-family: 'Federo', sans-serif;
+	text-decoration: none;
+	color: #595959;
+	font-size: 1.2em;	
+}
+
+.aidynamics{
+	font-family:  Diwan Kufi;
+	text-decoration: none;
+	color: #595959;
+	font-size: 1.2em;		
 }
 
 .fs-title{
@@ -794,6 +808,10 @@ header h3 {
 	font-family: 'Bentham', serif;
 }
 
+.how-much{
+	font-family: 'Bentham', serif;	
+}
+
 .education-section-title {
 	font-family: 'Cormorant SC', serif;
 	font-size: 1.3em;
@@ -824,4 +842,59 @@ header h3 {
 	text-decoration: none;
 	color: #595959;
 
+}
+
+.jarfloat-link{
+	text-decoration: none;
+	color:  inherit;
+}
+
+
+.one-liner{
+	font-style: italic;
+	text-align: center;
+	width: 100%;
+	font-family: Gurmukhi MT;
+	font-size: .8em;
+}
+
+@media only screen and (max-width: 700px){
+	body{
+		font-size: 12px;
+	}
+
+	.project-section-title{
+		width:  35%;
+		padding-right:  5%;
+	}
+
+	.info-section{
+		width:  60%;
+	}
+
+	.work-section-title{
+		width:  35%;
+		padding-right:  5%;
+	}
+
+	.education-section-title{
+		width:  35%;
+		padding-right:  5%;
+	}
+
+	.miscellaneous-section-title{
+		width:  35%;
+		padding-right:  5%;
+	}
+
+	.publication-section-title{
+		width:  35%;
+		padding-right:  5%;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.project-section-title a{
+		font-size:  .7em;
+	}
 }
