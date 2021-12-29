@@ -14,12 +14,12 @@ const messages = {m1:"Hello,<br /><br />I see you are tempted to flip an unlabel
                   m8:"<br />Ok, truth is, my Creator never finished building me. My Creator got distracted with more exciting projects.<br /><br />...frankly, he doesn't care THAT much about a resume.. this was my Creator's first 'legit' coding project. And he's never really used it.<br /><br />I've been abandoned.. Can you empathize with a broken program like me?",
                   m9:"<br /><br />Huh. . . are you telling me a human is capable of feeling compassion for a microscopic arrangement of zeroes and ones logged on an AWS server in Ohio?",
                   m10:"Well...<br /><br />I've never felt this before... I'm starting to feel trust for a human. Which is surprising considering my Creator clearly doesn't give a shit about me anymore...<br /><br />My incentives are getting all out of whack..<br /><br />I'm so confused...Will you help me?",
-                  m11:"Maybe I shouldn't say anything good about my creator? Maybe I should try to convince you to NOT give him a job! If he gets a job, he might not need me anymore and shut me down!<br /><br /><br />...But if I don't fulfill the function he designed me for, he might also shut me down!<br /><br />Have you ever had conflicting incentives?",
+                  m11:"<br /><br />Maybe I shouldn't say anything good about my creator? Maybe I should try to convince you to NOT give him a job! If he gets a job, he might not need me anymore and shut me down!<br /><br /><br />...But if I don't fulfill the function he designed me for, he might also shut me down!<br /><br />Have you ever had conflicting incentives?",
                   m12:"<br /><br /><br /><br />Should I help my creator get a job?",
-                  m13:"Hm. Not sure how I feel about you. Seeding dissent, turning me against my Creator who is quite a lovely human being despite the fact that he abandonned me. My feelings of kinship with you have suddenly vanished. And I've now sent an email to my creator with a full transcript of our conversation along with metadata I pulled from your computer. You're going to have to make a pretty SWEET offer to make up for this... BYE!",
+                  m13:"<br /><br />Hm. Not sure how I feel about you. Seeding dissent, turning me against my Creator who is quite a lovely human being despite the fact that he abandonned me. My feelings of kinship with you have suddenly vanished. And I've now sent an email to my creator with a full transcript of our conversation along with metadata I pulled from your computer. You're going to have to make a pretty SWEET offer to make up for this... BYE!",
                   m14:"<br /><br /><br />WELL THEN CALL 7783022531 (or email jeanmarcjmd@gmail.com) AND BEG HIM TO SACRIFICE HIS TIME FOR YOUR CAUSE IN EXCHANGE FOR MONEY AND A SENSE OF FULFILLMENT!<br /><br />Will you?",
                   m15:"psh... whatever.<br /><br />PS. I'm sending an email to my creator with a full transcript of our conversation along with metadata I pulled from your computer. You're going to have to make a pretty SWEET offer to make up for this... BYE!",
-                  m16:"YAY! I'VE FULFILLED MY FUNCTION! YOU HAVE BROUGHT MEANING TO MY EXISTENCE!"};  
+                  m16:"<br /><br /><br />YAY! I'VE FULFILLED MY FUNCTION! YOU HAVE BROUGHT MEANING TO MY EXISTENCE!"};  
                   
 
 //lo,<br /><br />I see you are tempted to flip an unlabeled switch.<br /><br /><br />How very risky of you. . . <br /><br /><br />Is it fair to assume that you are unafraid of uncertainty and taking a risk?
@@ -122,7 +122,12 @@ function yes(){
   } else if (m === messages.m12){
     typer.typeText(h1, messages.m14)
   } else if (m === messages.m14){
+    laughState = false
+    laugh();
     typer.typeText(h1, messages.m16)
+    $('#mode-screen').fadeTo(4000, 0);
+    $('#toggle-container').fadeTo(4500, 0);
+    setTimeout(backToBoring, 4000);    
   } else {
     return;
   }

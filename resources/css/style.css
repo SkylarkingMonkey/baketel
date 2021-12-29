@@ -246,6 +246,13 @@ body{
 	cursor: pointer;
 }
 
+
+.yes-box:active{
+	background-color: #03BD03;
+	color:  #222;
+}
+
+
 #code-box {
 	display: none;
 
@@ -270,6 +277,12 @@ input:focus {outline:none;}
 .wuss-box {
 	color: #FF0505;
 }
+
+.wuss-box:active{
+	background-color: #FF0505;
+	color:  white;
+}
+
 
 .evil-face-container{
 	display: none;
@@ -571,6 +584,28 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 500px){
+	.switch{
+		height:  20px;
+		width:  42px;
+	}
+
+	.slider:before{
+		bottom:  3px;
+		height:  14px;
+		width:  14px;
+	}
+
+	.code-link{
+		font-size:  .65em;
+	}
+
+	.info-header{
+		font-size:  .85em;
+	}
 }
 
 /***************Maze****************/
