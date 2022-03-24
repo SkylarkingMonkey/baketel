@@ -10,6 +10,14 @@ body{
 }
 
 
+.special-code-note{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 2.5em;
+	font-size: .75em;
+	font-style: italic;
+}
+
 
 .mode-screen-off {
 	display: none;
