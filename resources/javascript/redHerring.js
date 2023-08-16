@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("red herring")
     // Select the span with class "gateway"
     const gatewaySpan = document.querySelector('.gateway');
     // Check if the span exists
