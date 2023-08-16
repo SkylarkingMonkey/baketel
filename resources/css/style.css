@@ -6,6 +6,7 @@ body{
 	font-family:'Quicksand', sans-serif;
 	font-size: 16px;
 	/*min-width: 650px;*/
+	overflow: hidden;
 
 }
 
@@ -940,4 +941,27 @@ header h3 {
 	.project-section-title a{
 		font-size:  .7em;
 	}
+}
+
+.gateway{
+	font-size: .8em;
+}
+
+.red-herring{
+	font-family: 'Times New Roman', serif;
+	position: absolute;
+	width: 100%;
+	z-index: 9999;
+	background-color: white;
+	color: black;
+	height: 100%;
+	line-height: 2.5em;
+	overflow: none;
+}
+
+.red-herring h1{
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 2em;
 }
